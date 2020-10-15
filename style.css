@@ -1,10 +1,16 @@
 /* Layout */
 .main {
-    display: flex;
+    display: flex; /* centers the content */
+    flex-direction: column;
     padding: 2em;
     height: 90vh;
     justify-content: center;
     align-items: middle;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
 }
 
 .clockbox,
@@ -16,12 +22,12 @@
 .circle {
     fill: none;
     stroke: #000;
-    stroke-width: 9;
-    stroke-miterlimit: 10;
+    stroke-width: 10;
+    stroke-miterlimit: 9;
 }
 
 .mid-circle {
-    fill: #000;
+    fill: rgb(124, 18, 18);
 }
 .hour-marks {
     fill: none;
@@ -57,10 +63,12 @@
 }
 
 /* Make all arms rotate around the same center point. */
-/* Optional: Use transition for animation. */
+
 #hour,
 #minute,
 #second {
     transform-origin: 300px 300px;
-    transition: transform .5s ease-in-out;
+
+    /* Optional: Use transition for animation. */
+    /* transition: transform .5s ease-in-out; */
 }
